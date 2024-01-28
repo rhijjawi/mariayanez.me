@@ -14,6 +14,13 @@ const folders = {
             ['It\'s Knuts', 'Project_ItsKnuts.pdf']
         ]
     },
+    "Videos" : {
+        files : [
+            ["It's Knuts Promo Video 1", "ikpv1.mp4"],
+            ["It's Knuts Promo Video 2", "ikpv2.mp4"],
+            ["It's Knuts Promo Video 3", "ikpv3.mp4"]
+        ]
+    }
 }
 function addEmail(){
     const div = document.createElement('div');
@@ -28,7 +35,7 @@ function addEmail(){
     div.appendChild(p)
     div.addEventListener("click", ()=>{
         open('mailto:maferyago@gmail.com', "_blank")
-        navigator.clipboard.writeText('mailto:maferyago@gmail.com')
+        navigator.clipboard.writeText('maferyago@gmail.com')
     })
     document.getElementById('contact').appendChild(div);
 }
@@ -103,6 +110,30 @@ for (i of Object.keys(folders)){
                 document.getElementById('content').scrollTop = 0;
                 openPDF(`./pdfs/${i[1]}`, `canvas-${folders["My Works"].files.indexOf(i)}`, folders["My Works"].files.indexOf(i))
             }
+        }
+        else if (e.target.parentElement.id == 2){
+            for (i of folders["Videos"].files){
+                const div = document.createElement('div')
+                div.className = 'h-24 videoDiv mx-auto my-20 mr-24 inline-block cursor-pointer';
+                const img = document.createElement('img');
+                img.className = 'h-full mx-auto'
+                img.src = './images/mkv.png'
+                div.id = `vid-`+folders["Videos"].files.indexOf(i)
+                const p = document.createElement('p');
+                p.className = 'max-w-full font-semibold text-center cursor-pointer whitespace-nowrap font-thin'
+                p.innerText = i[0]
+                div.appendChild(img)
+                div.appendChild(p)
+                document.getElementById('content').appendChild(div);
+                document.getElementById('content').scrollTop = 0;
+            }
+            function addEvents(){
+                var elem = document.getElementsByClassName("videoDiv");
+                   elem[0].addEventListener("click", ()=>window.open(`/videos/${folders["Videos"].files[0][1]}` , "_blank"));
+                   elem[1].addEventListener("click", ()=>window.open(`/videos/${folders["Videos"].files[1][1]}` , "_blank"), false);
+                   elem[2].addEventListener("click", ()=>window.open(`/videos/${folders["Videos"].files[2][1]}` , "_blank"), false);
+             };
+             addEvents()
         }
         else {
             document.getElementById('content').innerText = ''

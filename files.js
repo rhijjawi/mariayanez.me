@@ -6,22 +6,14 @@ const folders = {
     },
     'My Works' : {
         files : [
-            ['Pass me the Ketchup', 'PassMeTheKetchup_SantaCruz.pdf'],
-            ['Artworks', 'Artworks.pdf'],
-            ['Headspace Headlines', 'Headspace_headlines-2.pdf'],
-            ['Enjoy a Day Off', 'EnjoyADayOff_BerlinCampaign.pdf'],
-            ['Mini-Campaigns', 'MiniCampaigns.pdf'],
-            ['It\'s Knuts', 'Project_ItsKnuts.pdf']
+            ['It\'s Knuts', 'Project_ItsKnuts.pdf', null],
+            ['Pass me the Ketchup', 'PassMeTheKetchup_SantaCruz.pdf', null],
+            ['Artworks', 'Artworks.pdf', null],
+            ['Headspace Headlines', 'Headspace_headlines-2.pdf', null],
+            ['Enjoy a Day Off', 'EnjoyADayOff_BerlinCampaign.pdf', null],
+            ['Mini-Campaigns', 'MiniCampaigns.pdf', null]
         ]
     },
-    'Independent Projects' : {}
-    // "Videos" : {
-    //     files : [
-    //         ["It's Knuts Promo Video 1", "ikpv1.mp4"],
-    //         ["It's Knuts Promo Video 2", "ikpv2.mp4"],
-    //         ["It's Knuts Promo Video 3", "ikpv3.mp4"]
-    //     ]
-    // }
 }
 function addEmail(){
     const div = document.createElement('div');
@@ -105,8 +97,21 @@ for (i of Object.keys(folders)){
         }
         else if (e.target.parentElement.id == 1){
             for (i of folders["My Works"].files){
+                let button;
+                if (folders["My Works"].files.indexOf(i) == 0){
+                    button = document.createElement('button')
+                    button.innerText = 'Click for Interactive Content'
+                    button.className = ' mx-auto right-0 left-0 -bottom-12 absolute w-fit py-[0.2rem] px-1 bg-gray-300 border border-black rounded'
+                    button.onclick = () => {open('https://www.canva.com/design/DAEK7_VPBTw/1YsnBSS247YiVM73PlBUQw/view', '_blank')}
+                }
+                else {
+                    button = document.createElement('button')
+                    button.innerText = 'View PDF'
+                    button.className = ' mx-auto right-0 left-0 -bottom-12 absolute w-fit py-[0.2rem] px-1 bg-gray-300 border border-black rounded'
+                    button.onclick = () => {open('./pdfs/'+i[1], '_blank')}
+                }
                 const div = document.createElement('div')
-                div.className = 'w-fit mx-auto mb-24';
+                div.className = 'w-fit mx-auto mb-24 relative';
                 const p = document.createElement('p');
                 p.className = 'text-xl font-bold pb-2'
                 const canvas = document.createElement('canvas');
@@ -128,6 +133,10 @@ for (i of Object.keys(folders)){
                 div.appendChild(canvas)
                 div.appendChild(buttonPrev)
                 div.appendChild(buttonNext)
+                try{
+                    div.appendChild(button)
+                }
+                catch {}
                 document.getElementById('content').appendChild(div);
                 document.getElementById('content').scrollTop = 0;
                 openPDF(`./pdfs/${i[1]}`, `pdf-${folders["My Works"].files.indexOf(i)}`, folders["My Works"].files.indexOf(i))

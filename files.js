@@ -57,7 +57,7 @@ function addInstagram(){
     div.classList.add('cursor-pointer',  'col-start-3')
     div.appendChild(img);
     div.appendChild(p)
-    div.addEventListener("click", ()=>{open('https://www.linkedin.com/in/mariayanezcopy', "_blank")})
+    div.addEventListener("click", ()=>{open('https://www.instagram.com/mariafernandayanez_/', "_blank")})
     document.getElementById('contact').appendChild(div);
 }
 function addEvents(id){

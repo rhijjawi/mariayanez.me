@@ -1,6 +1,6 @@
 function openPDF(url, canvasID, id){
     var { pdfjsLib } = globalThis;
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/pdf.worker.mjs'
+    pdfjsLib.GlobalWorkerOptions.workerSrc = './pdf.worker.mjs'
     var pdfDoc = null,
       pageNum = 1,
       pageRendering = false,
@@ -89,7 +89,7 @@ function openPDF(url, canvasID, id){
 
 function openPDF1(url, container) {
   var { pdfjsLib } = globalThis;
-  pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/pdf.worker.mjs';
+  pdfjsLib.GlobalWorkerOptions.workerSrc = './pdf.worker.mjs';
   var pdfDoc = null,
     pageNum = 1,
     pageRendering = false,

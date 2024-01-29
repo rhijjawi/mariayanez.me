@@ -19,7 +19,7 @@ function addEmail(){
     const div = document.createElement('div');
     const img = document.createElement('img');
     const p = document.createElement('p');
-    img.src = 'https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/mail.png';
+    img.src = './images/mail.png';
     img.classList.add('w-16', 'block','cursor-pointer', 'mx-auto');
     p.innerText = 'Contact Me';
     p.classList.add('max-w-full', 'text-center','cursor-pointer', 'whitespace-nowrap', 'font-thin')
@@ -36,7 +36,7 @@ function addLinkedIn(){
     const div = document.createElement('div');
     const img = document.createElement('img');
     const p = document.createElement('p');
-    img.src = 'https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/in.png';
+    img.src = './images/in.png';
     img.classList.add('w-16', 'block','cursor-pointer', 'mx-auto');
     p.innerText = 'LinkedIn';
     p.classList.add('max-w-full', 'text-center','cursor-pointer', 'whitespace-nowrap', 'font-thin')
@@ -50,7 +50,7 @@ function addInstagram(){
     const div = document.createElement('div');
     const img = document.createElement('img');
     const p = document.createElement('p');
-    img.src = 'https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/insta.png';
+    img.src = './images/insta.png';
     img.classList.add('w-16', 'block','cursor-pointer', 'mx-auto');
     p.innerText = 'Instagram';
     p.classList.add('max-w-full', 'text-center','cursor-pointer', 'whitespace-nowrap', 'font-thin')
@@ -74,10 +74,10 @@ function addEvents(id){
             const element = document.getElementById(`pdf-${j}`);
             try {
                 const buttonElement = document.getElementById(`button-${j}`);
-                buttonElement.addEventListener('click', ()=>{open(`https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/pdfs/${folders["My Works"].files[j][1]}`, '_blank')})
+                buttonElement.addEventListener('click', ()=>{open(`./pdfs/${folders["My Works"].files[j][1]}`, '_blank')})
             } catch (error) {
             }
-            element.addEventListener('click', ()=>{open(`https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/pdfs/${folders["My Works"].files[j][1]}`, '_blank')})
+            element.addEventListener('click', ()=>{open(`./pdfs/${folders["My Works"].files[j][1]}`, '_blank')})
         }
     }
  };
@@ -85,7 +85,7 @@ for (i of Object.keys(folders)){
     const div = document.createElement('div');
     const img = document.createElement('img');
     const p = document.createElement('p');
-    img.src = 'https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/folder.png';
+    img.src = './images/folder.png';
     img.classList.add('w-16', 'block','cursor-pointer', 'mx-auto');
     p.innerText = i;
     p.classList.add('max-w-full', 'text-center','cursor-pointer', 'whitespace-nowrap', 'font-thin')
@@ -98,7 +98,7 @@ for (i of Object.keys(folders)){
         if (e.target.parentElement.id == 0){
             container = document.getElementById('content')
             container.classList.remove('px-12')
-            openPDF1(`https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/pdfs/aboutme_maria_.pdf`, container)
+            openPDF1(`./pdfs/aboutme_maria_.pdf`, container)
         }
         else if (e.target.parentElement.id == 1){
             for (i of folders["My Works"].files){
@@ -144,7 +144,7 @@ for (i of Object.keys(folders)){
                 catch {}
                 document.getElementById('content').appendChild(div);
                 document.getElementById('content').scrollTop = 0;
-                openPDF(`https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/pdfs/${i[1]}`, `pdf-${folders["My Works"].files.indexOf(i)}`, folders["My Works"].files.indexOf(i))
+                openPDF(`./pdfs/${i[1]}`, `pdf-${folders["My Works"].files.indexOf(i)}`, folders["My Works"].files.indexOf(i))
             }
         }
         else if (e.target.parentElement.id == 2){
@@ -153,7 +153,7 @@ for (i of Object.keys(folders)){
                 div.className = 'h-24 videoDiv mx-auto my-20 mr-24 inline-block cursor-pointer';
                 const img = document.createElement('img');
                 img.className = 'h-full mx-auto'
-                img.src = 'https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/mkv.png'
+                img.src = './images/mkv.png'
                 div.id = `vid-`+folders["Videos"].files.indexOf(i)
                 const p = document.createElement('p');
                 p.className = 'max-w-full font-semibold text-center cursor-pointer whitespace-nowrap font-thin'

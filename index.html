@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Maria Yanez - Copywriter Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/lock.jpeg">
-    <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/finder.png">
-    <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/in.png">
-    <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/mail.png">
-    <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/maria.png">
-    <link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/folder.png">
-    <link rel="preload" as="fetch" href="https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/pdfs/aboutme_maria_.pdf">
+    <link rel="preload" as="image" href="./images/lock.jpeg">
+    <link rel="preload" as="image" href="./images/finder.png">
+    <link rel="preload" as="image" href="./images/in.png">
+    <link rel="preload" as="image" href="./images/mail.png">
+    <link rel="preload" as="image" href="./images/maria.png">
+    <link rel="preload" as="image" href="./images/folder.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/login.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/nifty.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/files.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/pdf.mjs" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/pdff.js" ></script>
+    <script src="login.js"></script>
+    <script src="nifty.js" defer></script>
+    <script src="files.js" defer></script>
+    <script src="pdf.mjs" type="module"></script>
+    <script src="pdff.js" ></script>
   </head>
   <body>
     <script>
@@ -26,19 +25,10 @@
         if(e.target == document.getElementsByTagName('main')[0]){
           document.getElementById('window').hidden = true;
         }
-        else{
-          if (localStorage.getItem("hasRequestedFullScreen") !== "true" && confirm("This website is best viewed in fullscreen. Would you like to enter fullscreen?")){
-            localStorage.setItem("hasRequestedFullScreen", "true");
-            document.getElementsByTagName('main')[0].requestFullscreen();
-          }
-          else {
-            localStorage.setItem("hasRequestedFullScreen", "true");
-          }
-        }
       }
     </script>
     <div id="lock" class="absolute h-full min-h-full min-w-full overflow-y-hidden z-50 bg-red-300">
-      <img src="https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/lock.jpeg" class="z-20 w-full min-h-screen" style="object-fit: cover;" />
+      <img src="./images/lock.jpeg" class="z-20 w-full min-h-screen" style="object-fit: cover;" />
       <div class="loginContainer absolute z-30 right-0 left-0 top-0 bottom-0">
         <div class="pic"></div>
         <h3 style="color: black;">Maria Yanez</h3>
@@ -57,7 +47,7 @@
       </div>
       <div class="cancel absolute right-0 left-0 mb-24 bottom-0" onclick="window.close()">
         <div class="button">
-          <img src="https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/delete-button.svg" alt="delete button" />
+          <img src="./images/delete-button.svg" alt="delete button" />
         </div>
        <span>Cancel</span> 
       </div>
@@ -66,9 +56,9 @@
       <nav class="z-50">
         <div class="batteryContainer">
           <span id="battery-level" class="inline-block">89</span>%
-          <img src="https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/battery-icon.svg" class="inline-block" alt="Battery icon" />
+          <img src="./images/battery-icon.svg" class="inline-block" alt="Battery icon" />
         </div>
-        <img class="wifi" src="https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/wifi-icon.svg" alt="wifi icon" />
+        <img class="wifi" src="./images/wifi-icon.svg" alt="wifi icon" />
 
         <div id="date">Thu 9 Apr 10:30 PM</div>
         <script>
@@ -77,7 +67,7 @@
       </nav>
       
       <div id="window" hidden  class="h-auto w-[83%] z-10 rounded-lg overflow-hidden relative">
-        <img draggable="false" src="https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/finder.png" class="z-10 w-full h-auto overflow-hidden" />
+        <img draggable="false" src="./images/finder.png" class="z-10 w-full h-auto overflow-hidden" />
         <div onclick="document.getElementById('window').hidden=true" class="absolute rounded-full bg-red-500 aspect-square w-[1.2%] z-10 top-0 left-0 ml-[1.8%] mt-[2.3%] cursor-pointer ">
           <svg fill="#000000" class="absolute -translate-x-[3.9%] rounded-full opacity-60 z-20 aspect-square w-[50%] p-0 left-0 right-0 bottom-0 top-0 z-10 mx-auto my-auto" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 460.775 460.775" xml:space="preserve">
           <path d="M285.08,230.397L456.218,59.27c6.076-6.077,6.076-15.911,0-21.986L423.511,4.565c-2.913-2.911-6.866-4.55-10.992-4.55 c-4.127,0-8.08,1.639-10.993,4.55l-171.138,171.14L59.25,4.565c-2.913-2.911-6.866-4.55-10.993-4.55 c-4.126,0-8.08,1.639-10.992,4.55L4.558,37.284c-6.077,6.075-6.077,15.909,0,21.986l171.138,171.128L4.575,401.505 c-6.074,6.077-6.074,15.911,0,21.986l32.709,32.719c2.911,2.911,6.865,4.55,10.992,4.55c4.127,0,8.08-1.639,10.994-4.55 l171.117-171.12l171.118,171.12c2.913,2.911,6.866,4.55,10.993,4.55c4.128,0,8.081-1.639,10.992-4.55l32.709-32.719 c6.074-6.075,6.074-15.909,0-21.986L285.08,230.397z"/>
@@ -94,7 +84,7 @@
       </div>
       <!-- <div class="cancel">
         <div class="button">
-          <img src="https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/delete-button.svg" alt="delete button" />
+          <img src="./images/delete-button.svg" alt="delete button" />
         </div>
        <span>Cancel</span> 
       </div> -->

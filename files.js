@@ -23,7 +23,7 @@ function addEmail(){
     img.classList.add('w-16', 'block','cursor-pointer', 'mx-auto');
     p.innerText = 'Contact Me';
     p.classList.add('max-w-full', 'text-center','cursor-pointer', 'whitespace-nowrap', 'font-thin')
-    div.classList.add( 'cursor-pointer', 'col-start-1')
+    div.classList.add( 'cursor-pointer', 'col-start-1', 'h-fit', 'max-h-fit')
     div.appendChild(img);
     div.appendChild(p)
     div.addEventListener("click", ()=>{
@@ -40,7 +40,7 @@ function addLinkedIn(){
     img.classList.add('w-16', 'block','cursor-pointer', 'mx-auto');
     p.innerText = 'LinkedIn';
     p.classList.add('max-w-full', 'text-center','cursor-pointer', 'whitespace-nowrap', 'font-thin')
-    div.classList.add('cursor-pointer',  'col-start-2')
+    div.classList.add('cursor-pointer',  'col-start-2', 'h-fit', 'max-h-fit')
     div.appendChild(img);
     div.appendChild(p)
     div.addEventListener("click", ()=>{open('https://www.linkedin.com/in/mariayanezcopy', "_blank")})
@@ -54,7 +54,7 @@ function addInstagram(){
     img.classList.add('w-16', 'block','cursor-pointer', 'mx-auto');
     p.innerText = 'Instagram';
     p.classList.add('max-w-full', 'text-center','cursor-pointer', 'whitespace-nowrap', 'font-thin')
-    div.classList.add('cursor-pointer',  'col-start-3')
+    div.classList.add('cursor-pointer',  'col-start-3', 'h-fit', 'max-h-fit')
     div.appendChild(img);
     div.appendChild(p)
     div.addEventListener("click", ()=>{open('https://www.instagram.com/mariafernandayanez_/w', "_blank")})

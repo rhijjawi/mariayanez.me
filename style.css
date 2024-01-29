@@ -1,6 +1,6 @@
 @font-face {
   font-family: SF;
-  src: url(./SF-UI-Display-Regular.otf);
+  src: url(https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/SF-UI-Display-Regular.otf);
 }
 
 html,
@@ -17,9 +17,9 @@ body {
   font-family: Calibri, sans-serif;
 }
 main {
-  /* background: url(./images/day.jpg); */
-  background: url(./images/back.jpeg);
-  /* background: url(./images/original.png); */
+  /* background: url(https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/day.jpg); */
+  background: url(https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/back.jpeg);
+  /* background: url(https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/original.png); */
   background-position: center;
   height: 100%;
   background-size: cover;
@@ -47,7 +47,7 @@ h3 {
 .loginContainer .pic {
   height: 100px;
   width: 100px;
-  background: url(./images/penguin.jpeg);
+  background: url(https://cdn.jsdelivr.net/gh/rhijjawi/mariayanez.me/images/penguin.jpeg);
   background-position: center;
   background-size: cover;
   border-radius: 150%;

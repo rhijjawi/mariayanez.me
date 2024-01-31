@@ -6,9 +6,10 @@ const folders = {
     },
     'My Works' : {
         files : [
+            ['ABSOLUT WORTH IT', "ABSOLUTWORTHIT.pdf", null],
+            ['Headspace Headlines', 'Headspace_headlines-2.pdf', null],
             ['Pass me the Ketchup', 'PassMeTheKetchup_SantaCruz.pdf', null],
             ['Artworks', 'Artworks.pdf', null],
-            ['Headspace Headlines', 'Headspace_headlines-2.pdf', null],
             ['Enjoy a Day Off', 'EnjoyADayOff_BerlinCampaign.pdf', null],
             ['Mini-Campaigns', 'MiniCampaigns.pdf', null],
             ['It\'s Knuts', 'Project_ItsKnuts.pdf', null]
@@ -103,7 +104,7 @@ for (i of Object.keys(folders)){
         else if (e.target.parentElement.id == 1){
             for (i of folders["My Works"].files){
                 let button;
-                if (folders["My Works"].files.indexOf(i) == 5){
+                if (folders["My Works"].files.indexOf(i) == 6){
                     button = document.createElement('button')
                     button.innerText = 'Click for Interactive Content'
                     button.className = ' mx-auto right-0 left-0 -bottom-12 absolute w-fit py-[0.2rem] px-1 bg-gray-300 border border-black rounded'
